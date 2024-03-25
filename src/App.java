@@ -1,28 +1,20 @@
 import javax.swing.*;
+import java.awt.*;
 
-public class App extends JFrame {
+public class App{
     private static int WIDTH = 500,HEIGHT=500;
-    JLabel label;
+    JFrame frame;
     public App(){
+        frame = new JFrame();
+        frame.add(new Panel());
         configureFrame();
-        addLabelStart();
-        addComponents();
-        getContentPane().add(label);
     }
     private void configureFrame(){
-        setTitle("Tic Tac Toe Online");
-        setSize(WIDTH,HEIGHT);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-        setLayout(null);
-    }
-    private void addComponents(){
-        getContentPane().add(label);
-    }
-    private void addLabelStart(){
-        label = new JLabel();
-        label.setText("Hello in Tic tac toe online!!!");
-        label.setBounds(150,0,300,50);
+        frame.setTitle("Tic Tac Toe Online");
+        frame.setSize(WIDTH,HEIGHT);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setLayout(null);
     }
 
 }
